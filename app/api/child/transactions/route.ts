@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {requireRole} from '@/lib/auth';import {store} from '@/lib/store';export async function GET(){try{const s=await requireRole('child');return NextResponse.json({transactions:store.transactions.filter(x=>x.childId===s.id)})}catch{return NextResponse.json({error:'Unauthorized'},{status:401})}}

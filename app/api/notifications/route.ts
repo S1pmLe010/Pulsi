@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {requireAnyRole} from '@/lib/auth';import {store} from '@/lib/store';export async function GET(){try{const s=await requireAnyRole();return NextResponse.json({notifications:store.notifications.filter(n=>n.userId===s.id)})}catch{return NextResponse.json({error:'Unauthorized'},{status:401})}}

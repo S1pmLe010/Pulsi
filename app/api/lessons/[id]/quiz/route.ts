@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';export async function POST(req:Request){const {attempt}=await req.json();return NextResponse.json({ok:true,attempt,coins:attempt===1?100:attempt===2?60:30})}

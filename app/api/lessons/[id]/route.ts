@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';export async function GET(_req:Request,{params}:{params:Promise<{id:string}>}){const {id}=await params;return NextResponse.json({id,title:`Lesson ${id}`,intro:'Qisqa tushuntirish',examples:['Real hayot misoli'],quiz:['Qaysi javob to‘g‘ri?']})}

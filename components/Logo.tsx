@@ -1,0 +1,2 @@
+"use client";
+export function Logo({compact=false}:{compact?:boolean}){return <div className="flex items-center gap-2.5 select-none"><div className="relative grid h-10 w-10 place-items-center rounded-[13px] bg-[#17a673] text-white shadow-[0_8px_20px_rgba(23,166,115,.25)]"><span className="text-[25px] font-black leading-none">P</span><span className="absolute bottom-[7px] right-[6px] h-1.5 w-3 rounded-full bg-[#d7f6e9]"/></div>{!compact&&<span className="text-xl font-extrabold tracking-[.12em] text-[#0b2b22]">PULSI</span>}</div>}

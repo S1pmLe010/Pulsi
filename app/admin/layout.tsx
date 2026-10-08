@@ -1,0 +1,1 @@
+import {DashboardShell} from '@/components/DashboardShell';export default function Layout({children}:{children:React.ReactNode}){return <DashboardShell role="admin" title="Admin paneli">{children}</DashboardShell>}

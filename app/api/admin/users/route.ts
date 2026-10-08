@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {requireRole} from '@/lib/auth';import {store,userPublic} from '@/lib/store';export async function GET(){try{await requireRole('admin');return NextResponse.json({users:store.users.map(userPublic)})}catch{return NextResponse.json({error:'Unauthorized'},{status:401})}}

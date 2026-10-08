@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {lessons} from '@/lib/mock';export async function GET(){return NextResponse.json({lessons:lessons.map((title,i)=>({id:`l${i+1}`,title,xp:10}))})}
